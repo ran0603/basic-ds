@@ -1,5 +1,18 @@
-@import 'typography';
-@import 'spacing';
-@import 'grid';
-@import 'colors';
-@import 'buttons';
+// ================================
+// basic-ds.scss — Main entry point
+// ================================
+
+// 1. Utilities / design tokens (CSS custom properties)
+@use 'utilities';
+
+// 2. Themes (token overrides)
+@use 'themes';
+
+// 3. Base (reset + base typography)
+@use 'base';
+
+// 4. Layout (grid, spacing helpers)
+@use 'layout';
+
+// 5. Components (buttons, forms, cards, alerts)
+@use 'components';

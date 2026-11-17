@@ -1,0 +1,47 @@
+// ================================
+// Components: Forms
+// ================================
+
+.form-group {
+    margin-bottom: var(--space-md);
+}
+
+label {
+    display: block;
+    margin-bottom: var(--space-xxs);
+    font-size: var(--text-sm);
+    color: var(--color-text);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+input[type="number"],
+textarea,
+select {
+    display: block;
+    width: 100%;
+    padding: var(--space-xs) var(--space-sm);
+    border: 1px solid var(--form-element-border);
+    border-radius: var(--radius);
+    background-color: var(--form-element-bg);
+    color: var(--color-text);
+    transition: border-color .2s;
+
+    &::placeholder {
+        color: var(--form-text-placeholder);
+    }
+
+    &:focus {
+        outline: none;
+        border-color: var(--form-element-border-focus);
+    }
+
+    &.is-invalid {
+        border-color: var(--form-element-border-error);
+    }
+}
+

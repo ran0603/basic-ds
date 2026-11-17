@@ -1,0 +1,14 @@
+// ================================
+// Abstracts: Functions
+// ================================
+@use 'sass:math';
+
+// Number of columns in the grid system
+$grid-columns: 12 !default;
+
+// Round a column width to two decimal places
+@function round-width($i) {
+    $width: math.div(math.floor(math.div(100 * $i * 100, $grid-columns)), 100);
+    @return $width + "%";
+}
+

@@ -1,0 +1,26 @@
+// ================================
+// Abstracts: Mixins
+// ================================
+
+// Smooth font rendering (useful on dark backgrounds)
+@mixin fontSmooth {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+// Simple breakpoint helper
+// Usage: @include breakpoint(md) { … }
+$breakpoints: (
+    sm: 480px,
+    md: 768px,
+    lg: 1024px,
+    xl: 1280px
+) !default;
+
+@mixin breakpoint($bp) {
+    $value: map-get($breakpoints, $bp);
+    @media (min-width: $value) {
+        @content;
+    }
+}
+

@@ -1,23 +1,50 @@
 {
   "name": "basic-ds",
-  "version": "1.0.2",
-  "description": "Basic design system",
-  "main": "index.js",
+  "version": "1.1.0",
+  "description": "A lightweight, Sass-based CSS design system with utility classes and reusable UI components.",
+  "type": "module",
+  "style": "./css/basic-ds.css",
+  "sass": "./sass/basic-ds.scss",
+  "exports": {
+    ".": {
+      "sass": "./sass/basic-ds.scss",
+      "style": "./css/basic-ds.css",
+      "default": "./css/basic-ds.css"
+    },
+    "./css": "./css/basic-ds.css",
+    "./css/*": "./css/*",
+    "./sass": "./sass/basic-ds.scss",
+    "./sass/*": "./sass/*",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "css",
+    "sass",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
   "scripts": {
-    "build": "npm run build-clean && npm run build-sass && npm run build-autoprefix && npm run build-cleancss",
-    "build-autoprefix": "postcss --use autoprefixer --map false --output css/basic-ds.css css/basic-ds.css",
-    "build-clean": "rimraf css",
-    "build-cleancss": "cleancss -o css/basic-ds.min.css css/basic-ds.css",
-    "build-sass": "node-sass --output-style expanded --source-map true sass/basic-ds.scss css/basic-ds.css",
-    "deploy": "npm run build",
-    "start": "npm run build-sass -- --watch"
+    "build": "npm run build:clean && npm run build:sass && npm run build:prefix && npm run build:minify",
+    "build:clean": "rimraf css",
+    "build:sass": "sass sass/basic-ds.scss css/basic-ds.css --style expanded --source-map",
+    "build:prefix": "postcss css/basic-ds.css --use autoprefixer --map false --output css/basic-ds.css",
+    "build:minify": "cleancss -o css/basic-ds.min.css css/basic-ds.css",
+    "watch": "sass --watch sass/basic-ds.scss css/basic-ds.css --style expanded --source-map",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/razanazuddin/basic-ds.git"
   },
   "keywords": [
-    "design-system"
+    "css",
+    "sass",
+    "scss",
+    "design-system",
+    "design-tokens",
+    "utility-css",
+    "ui-components"
   ],
   "author": "Razan Azuddin",
   "license": "MIT",
@@ -26,10 +53,11 @@
   },
   "homepage": "https://github.com/razanazuddin/basic-ds#readme",
   "devDependencies": {
-    "autoprefixer": "^9.1.5",
-    "clean-css-cli": "^4.2.1",
-    "node-sass": "^4.9.3",
-    "postcss-cli": "^6.0.0",
-    "rimraf": "^2.6.2"
+    "autoprefixer": "^10.4.20",
+    "clean-css-cli": "^5.6.3",
+    "postcss": "^8.4.49",
+    "postcss-cli": "^11.0.0",
+    "rimraf": "^6.0.1",
+    "sass": "^1.83.0"
   }
 }

@@ -1,0 +1,21 @@
+// ================================
+// Utilities: Typography helpers
+// ================================
+
+.text-left    { text-align: left;   }
+.text-center  { text-align: center; }
+.text-right   { text-align: right;  }
+
+.text-primary { color: var(--color-primary); }
+.text-accent  { color: var(--color-accent);  }
+.text-subtle  { color: var(--color-text-subtle); }
+.text-heading { color: var(--color-text-heading); }
+
+.font-bold    { font-weight: bold; }
+.font-normal  { font-weight: normal; }
+.italic       { font-style: italic; }
+
+.uppercase    { text-transform: uppercase; }
+.lowercase    { text-transform: lowercase; }
+.capitalize   { text-transform: capitalize; }
+
