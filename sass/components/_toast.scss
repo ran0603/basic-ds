@@ -1,0 +1,37 @@
+// ================================
+// Components: Toast
+// ================================
+
+.toast {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.7rem 1rem;
+    background: var(--black);
+    color: white;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-md);
+    font-size: 0.875rem;
+    min-width: 220px;
+
+    &__icon {
+        font-size: 1rem;
+        flex-shrink: 0;
+    }
+
+    &__close {
+        margin-left: auto;
+        cursor: pointer;
+        opacity: 0.6;
+        font-size: 1rem;
+        background: none;
+        border: none;
+        color: white;
+        padding: 0;
+        line-height: 1;
+        transition: opacity 0.15s;
+
+        &:hover { opacity: 1; }
+    }
+}
+

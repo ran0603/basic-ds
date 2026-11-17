@@ -1,0 +1,21 @@
+// ================================
+// Components: Spinner
+// ================================
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.spinner {
+    display: inline-block;
+    width: 1.25em;
+    height: 1.25em;
+    border: 2px solid color-mix(in srgb, currentColor 30%, transparent);
+    border-top-color: currentColor;
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+
+    &--sm { width: 1em;  height: 1em; }
+    &--lg { width: 2em;  height: 2em; border-width: 3px; }
+}
+
