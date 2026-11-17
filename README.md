@@ -9,10 +9,10 @@ A lightweight, **Sass-based CSS design system** with design tokens, utility clas
 
 ## Features
 
-- **Design tokens** — colors, spacing, typography, and border radius as CSS custom properties
-- **Components** — buttons, forms, cards, and alerts
-- **Utilities** — spacing, typography, and color helpers
-- **12-column flexbox grid**
+- **Design tokens** — colors, spacing, typography, shadows, and border radius as CSS custom properties
+- **Components** — complete UI suite: forms, feedback, navigation, content, and actions
+- **Utilities** — spacing, typography, alignment, truncation, borders, shadows, z-index, visibility (`.hidden`, `.sr-only`), and colors
+- **Layout helpers** — 12-column flexbox grid, flex stack, cluster, and container
 - **Theme layer** — override any token without touching source files
 - **Modular Sass** — `@use` / `@forward` architecture, zero global leakage
 - Ships compiled CSS + source Sass
@@ -107,18 +107,37 @@ sass/
 │   ├── _reset.scss
 │   ├── _typography.scss
 │   └── _index.scss
-├── layout/           # Grid + spacing helpers
+├── layout/           # Container, stack, cluster, grid, spacing helpers
+│   ├── _container.scss
 │   ├── _grid.scss
 │   ├── _spacing.scss
 │   └── _index.scss
-├── components/       # UI components
-│   ├── _buttons.scss
-│   ├── _forms.scss
-│   ├── _cards.scss
+├── components/       # Reusable UI components
+│   ├── _accordion.scss
 │   ├── _alerts.scss
+│   ├── _avatar.scss
+│   ├── _badge.scss
+│   ├── _breadcrumb.scss
+│   ├── _buttons.scss
+│   ├── _cards.scss
+│   ├── _divider.scss
+│   ├── _empty-state.scss
+│   ├── _forms.scss
+│   ├── _list.scss
+│   ├── _menu.scss
+│   ├── _navbar.scss
+│   ├── _pagination.scss
+│   ├── _progress.scss
+│   ├── _sidenav.scss
+│   ├── _spinner.scss
+│   ├── _table.scss
+│   ├── _tabs.scss
+│   ├── _toast.scss
+│   ├── _tooltip.scss
 │   └── _index.scss
-├── utilities/        # Color, spacing, and typography utilities
+├── utilities/        # Colors, spacing, typography, and misc CSS helpers
 │   ├── _colors.scss
+│   ├── _misc.scss
 │   ├── _spacing.scss
 │   ├── _typography.scss
 │   └── _index.scss
@@ -127,6 +146,20 @@ sass/
 │   └── _index.scss
 └── basic-ds.scss     # Main entry point
 ```
+
+---
+
+## Component Areas & Classes
+
+| Area | Components / Classes |
+| --- | --- |
+| **Forms** | `.form-group`, `.form-label`, `.form-hint`, `.form-error`, `.input`, `.select`, `.textarea`, `.check-group`, `.radio-group`, `.switch` |
+| **Feedback** | `.alert` (success, error, warning, info), `.badge` (dot & color variants), `.toast`, `.spinner`, `.progress`, `.empty-state` |
+| **Navigation** | `.navbar`, `.sidenav`, `.breadcrumb`, `.tabs`, `.pagination`, `.menu` |
+| **Content** | `.card` (header, body, footer, hover), `.accordion`, `.table-wrap`, `.table`, `.list`, `.avatar` & `.avatar-group`, `.divider` (plain & labeled), `.tooltip-wrap` & `.tooltip` |
+| **Actions** | `.btn` (primary, secondary, accent, ghost, link, icon), sizes (`.btn--xs` to `.btn--xl`), `.btn--full`, `.btn-group`, loading states |
+| **Layout** | `.container`, `.stack`, `.cluster`, `.flex-grid` (`.col--1` to `.col--12`), margin & padding helpers |
+| **Utilities** | Visibility (`.hidden`, `.sr-only`), text alignment, `.truncate`, borders (`.border`, `.border-0`), `.rounded`, `.rounded-full`, shadows (`.shadow-sm`, `.shadow-md`, `.shadow-lg`), and `.z-0` to `.z-50` |
 
 ---
 
