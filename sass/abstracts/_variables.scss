@@ -36,6 +36,17 @@
 // --- Border radius ---
 :root {
     --radius: 0.25em;
+    --radius-sm: 0.125em;
+    --radius-md: 0.25em;
+    --radius-lg: 0.5em;
+    --radius-full: 9999px;
+}
+
+// --- Shadows ---
+:root {
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 // --- Grid ---

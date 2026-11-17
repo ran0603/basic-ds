@@ -1,0 +1,30 @@
+// ================================
+// Components: List
+// ================================
+
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    overflow: hidden;
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--space-sm);
+        padding: var(--space-xs) var(--space-sm);
+        font-size: var(--text-sm);
+
+        & + & {
+            border-top: 1px solid var(--color-border);
+        }
+
+        &:hover {
+            background: var(--grey-1);
+        }
+    }
+}
+

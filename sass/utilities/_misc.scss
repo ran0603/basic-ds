@@ -1,0 +1,72 @@
+// ================================
+// Utilities: Common UI utilities
+// ================================
+
+// Visibility
+.hidden {
+    display: none !important;
+}
+
+.sr-only {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+// Borders
+.border {
+    border: 1px solid var(--color-border) !important;
+}
+
+.border-0 {
+    border: none !important;
+}
+
+// Border Radius
+.rounded {
+    border-radius: var(--radius) !important;
+}
+
+.rounded-sm {
+    border-radius: var(--radius-sm, 0.125em) !important;
+}
+
+.rounded-md {
+    border-radius: var(--radius-md, 0.25em) !important;
+}
+
+.rounded-lg {
+    border-radius: var(--radius-lg, 0.5em) !important;
+}
+
+.rounded-full {
+    border-radius: var(--radius-full, 9999px) !important;
+}
+
+// Shadows
+.shadow-sm {
+    box-shadow: var(--shadow-sm) !important;
+}
+
+.shadow-md {
+    box-shadow: var(--shadow-md) !important;
+}
+
+.shadow-lg {
+    box-shadow: var(--shadow-lg) !important;
+}
+
+// Z-index
+.z-0  { z-index: 0; }
+.z-10 { z-index: 10; }
+.z-20 { z-index: 20; }
+.z-30 { z-index: 30; }
+.z-40 { z-index: 40; }
+.z-50 { z-index: 50; }
+

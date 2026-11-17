@@ -1,0 +1,35 @@
+// ================================
+// Components: Avatar
+// ================================
+
+.avatar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: 600;
+    font-size: var(--text-sm);
+    color: white;
+    background-color: var(--color-primary);
+    flex-shrink: 0;
+
+    &--xs { width: 24px; height: 24px; font-size: 0.6rem; }
+    &--sm { width: 32px; height: 32px; font-size: 0.75rem; }
+    &--md { width: 40px; height: 40px; }
+    &--lg { width: 52px; height: 52px; font-size: 1.1rem; }
+    &--xl { width: 64px; height: 64px; font-size: 1.35rem; }
+}
+
+.avatar-group {
+    display: flex;
+
+    .avatar {
+        border: 2px solid white;
+        margin-left: -8px;
+
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+}
+

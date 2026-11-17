@@ -1,0 +1,48 @@
+// ================================
+// Components: Menu
+// ================================
+
+.menu {
+    background: var(--color-body, white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-md);
+    padding: var(--space-xxs) 0;
+    min-width: 160px;
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: var(--space-xs);
+        padding: var(--space-xs) var(--space-sm);
+        font-size: var(--text-sm);
+        color: var(--color-text);
+        cursor: pointer;
+        text-decoration: none;
+        transition: background .12s;
+
+        &:hover {
+            background: var(--grey-1);
+        }
+
+        &--danger {
+            color: var(--color-error);
+        }
+    }
+
+    &__divider {
+        height: 1px;
+        background: var(--color-border);
+        margin: var(--space-xxs) 0;
+    }
+
+    &__label {
+        padding: var(--space-xxs) var(--space-sm);
+        font-size: var(--text-xs);
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: .06em;
+        color: var(--color-text-subtle);
+    }
+}
+
